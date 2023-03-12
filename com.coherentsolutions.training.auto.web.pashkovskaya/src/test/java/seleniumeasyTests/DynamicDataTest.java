@@ -1,12 +1,12 @@
+package seleniumeasyTests;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.time.Duration;
 
@@ -17,8 +17,8 @@ import static org.testng.Assert.assertTrue;
 public class DynamicDataTest {
     private WebDriver driver;
 
-    @BeforeClass
-    void setup () {
+    @BeforeMethod
+    public void setup () {
         ChromeOptions handlingSSL = new ChromeOptions();
         handlingSSL.setAcceptInsecureCerts(true);
         driver = new ChromeDriver(handlingSSL);
@@ -26,19 +26,19 @@ public class DynamicDataTest {
     }
 
     @Test
-    void testDynamicData() {
-        WebElement getNewUserButton = driver.findElement(LOCATOR_GET_NEW_USER_BUTTON);
+    public void testDynamicData() {
+        WebElement getNewUserButton = driver.findElement(GET_NEW_USER_BUTTON);
         getNewUserButton.click();
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
         wait.pollingEvery(Duration.ofSeconds(2));
-        WebElement user = wait.until(ExpectedConditions.visibilityOfElementLocated(LOCATOR_USER));
+        WebElement user = wait.until(ExpectedConditions.visibilityOfElementLocated(USER));
 
-        assertTrue(user.isDisplayed(),"The user must be displayed");
+        assertTrue(user.isDisplayed(),"The user is not displayed");
     }
 
-    @AfterClass
-    void cleanup () {
+    @AfterMethod
+    public void cleanup () {
         driver.quit();
     }
 }

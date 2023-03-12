@@ -1,12 +1,12 @@
+package seleniumeasyTests;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.time.Duration;
 
@@ -16,9 +16,10 @@ import static org.testng.Assert.assertEquals;
 
 public class DownloadTest {
     private WebDriver driver;
+    private static final String ER_OF_TEST_DOWNLOAD_PROGRESS = "0%";
 
-    @BeforeClass
-    void setup () {
+    @BeforeMethod
+    public void setup () {
         ChromeOptions handlingSSL = new ChromeOptions();
         handlingSSL.setAcceptInsecureCerts(true);
         driver = new ChromeDriver(handlingSSL);
@@ -26,22 +27,22 @@ public class DownloadTest {
     }
 
     @Test
-    void testDownloadProgress() {
-        WebElement downloadButton = driver.findElement(LOCATOR_DOWNLOAD_PROGRESS_BUTTON);
+    public void testDownloadProgress() {
+        WebElement downloadButton = driver.findElement(DOWNLOAD_PROGRESS_BUTTON);
         downloadButton.click();
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.textToBePresentInElementLocated(LOCATOR_PERCENT_TEXT, "50%"));
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(PERCENT_TEXT, "50%"));
 
         driver.navigate().refresh();
 
-        WebElement percentText = driver.findElement(LOCATOR_PERCENT_TEXT);
+        WebElement percentText = driver.findElement(PERCENT_TEXT);
 
-        assertEquals(percentText.getText(), "0%", "The percent must be 0%");
+        assertEquals(percentText.getText(), ER_OF_TEST_DOWNLOAD_PROGRESS, "The percent mismatch");
     }
 
-    @AfterClass
-    void cleanup () {
+    @AfterMethod
+    public void cleanup () {
         driver.quit();
     }
 }
