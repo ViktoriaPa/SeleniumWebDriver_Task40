@@ -1,8 +1,9 @@
 package logInTests;
 
+import base.BaseTest;
+import base.PageDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
@@ -14,11 +15,10 @@ import static constants.MainConstants.*;
 import static java.util.concurrent.TimeUnit.*;
 import static org.testng.Assert.*;
 
-public class LogInParameterizedTest {
-    private WebDriver driver;
+public class LogInParameterizedTest extends BaseTest {
     @Test (dataProvider = "login")
     public void logInTest(String username, String password) {
-        driver = new ChromeDriver();
+        WebDriver driver = PageDriver.getDriver();
         driver.get(LINK_TO_MAIN_YANDEX_PAGE);
         driver.manage().timeouts().implicitlyWait(10, SECONDS);
         driver.manage().window().maximize();
@@ -42,7 +42,6 @@ public class LogInParameterizedTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(USERNAME));
 
         String actualTitle = driver.getTitle();
-        driver.quit();
 
         assertTrue(actualTitle.contains("Inbox — Yandex Mail"),"The title must contain \"Inbox — Yandex Mail\"");
     }

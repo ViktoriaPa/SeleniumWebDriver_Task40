@@ -4,23 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01daa04e-a9bb-4aba-a5c8-81f8dd8d2cfb" name="Changes" comment="Task 40 is completed">
-      <change afterPath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/resources/suites/testng_AllTests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/resources/suites/testng_seleniumeasyTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="01daa04e-a9bb-4aba-a5c8-81f8dd8d2cfb" name="Changes" comment="made changes according to comments except BaseTest">
+      <change afterPath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/java/base/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/java/base/PageDriver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/main/java/org/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AlertsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/java/seleniumeasyTests/AlertsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DownloadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/java/seleniumeasyTests/DownloadTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DynamicDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/java/seleniumeasyTests/DynamicDataTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LogInParameterizedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/java/logInTests/LogInParameterizedTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MultiselectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/java/seleniumeasyTests/MultiselectTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TableSortSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/java/seleniumeasyTests/TableSortSearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/constants/LocatorsConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/java/constants/LocatorsConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/constants/MainConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/java/constants/MainConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/java/logInTests/LogInParameterizedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/java/logInTests/LogInParameterizedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/java/seleniumeasyTests/AlertsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/java/seleniumeasyTests/AlertsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/java/seleniumeasyTests/DownloadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/java/seleniumeasyTests/DownloadTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/java/seleniumeasyTests/DynamicDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/java/seleniumeasyTests/DynamicDataTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/java/seleniumeasyTests/MultiselectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/java/seleniumeasyTests/MultiselectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/java/seleniumeasyTests/TableSortSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/java/seleniumeasyTests/TableSortSearchTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,18 +48,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/Users/viktoriapashkovskaya/IdeaProjects/SeleniumWebDriver_Task40/com.coherentsolutions.training.auto.web.pashkovskaya/src/main/resources",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.runner"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/viktoriapashkovskaya/IdeaProjects/SeleniumWebDriver_Task40/com.coherentsolutions.training.auto.web.pashkovskaya/src/main/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.runner&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/com.coherentsolutions.training.auto.web.pashkovskaya/src/main/resources" />
@@ -81,7 +75,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG./Users/viktoriapashkovskaya/IdeaProjects/SeleniumWebDriver_Task40/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/resources/suites/testng_AllTests.xml">
+  <component name="RunManager" selected="TestNG.LogInParameterizedTest">
     <configuration name="AlertsTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumWebDriver_Task40" />
       <extension name="coverage">
@@ -133,16 +127,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MultiselectTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LogInParameterizedTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumWebDriver_Task40" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="seleniumeasyTests.*" />
+          <option name="PATTERN" value="logInTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="seleniumeasyTests" />
-      <option name="MAIN_CLASS_NAME" value="seleniumeasyTests.MultiselectTest" />
+      <option name="PACKAGE_NAME" value="logInTests" />
+      <option name="MAIN_CLASS_NAME" value="logInTests.LogInParameterizedTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -162,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LogInParameterizedTest" />
         <item itemvalue="TestNG./Users/viktoriapashkovskaya/IdeaProjects/SeleniumWebDriver_Task40/com.coherentsolutions.training.auto.web.pashkovskaya/src/test/resources/suites/testng_AllTests.xml" />
-        <item itemvalue="TestNG.MultiselectTest" />
         <item itemvalue="TestNG.AlertsTest" />
-        <item itemvalue="TestNG.DynamicDataTest" />
         <item itemvalue="TestNG.DownloadTest" />
+        <item itemvalue="TestNG.DynamicDataTest" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678314987839</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="made changes according to comments except BaseTest">
+      <created>1678662265279</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678662265279</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -202,6 +203,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Task 40 is completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task 40 is completed" />
+    <MESSAGE value="made changes according to comments except BaseTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="made changes according to comments except BaseTest" />
   </component>
 </project>

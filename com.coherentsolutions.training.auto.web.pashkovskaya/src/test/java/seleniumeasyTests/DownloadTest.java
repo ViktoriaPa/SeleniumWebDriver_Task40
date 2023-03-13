@@ -1,9 +1,9 @@
 package seleniumeasyTests;
 
+import base.BaseTest;
+import base.PageDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
@@ -14,20 +14,13 @@ import static constants.LocatorsConstants.*;
 import static constants.MainConstants.LINK_SELENIUM_DOWNLOAD;
 import static org.testng.Assert.assertEquals;
 
-public class DownloadTest {
-    private WebDriver driver;
+public class DownloadTest extends BaseTest {
     private static final String ER_OF_TEST_DOWNLOAD_PROGRESS = "0%";
-
-    @BeforeMethod
-    public void setup () {
-        ChromeOptions handlingSSL = new ChromeOptions();
-        handlingSSL.setAcceptInsecureCerts(true);
-        driver = new ChromeDriver(handlingSSL);
-        driver.get(LINK_SELENIUM_DOWNLOAD);
-    }
-
     @Test
     public void testDownloadProgress() {
+        WebDriver driver = PageDriver.getDriver();
+        driver.get(LINK_SELENIUM_DOWNLOAD);
+
         WebElement downloadButton = driver.findElement(DOWNLOAD_PROGRESS_BUTTON);
         downloadButton.click();
 
@@ -39,10 +32,5 @@ public class DownloadTest {
         WebElement percentText = driver.findElement(PERCENT_TEXT);
 
         assertEquals(percentText.getText(), ER_OF_TEST_DOWNLOAD_PROGRESS, "The percent mismatch");
-    }
-
-    @AfterMethod
-    public void cleanup () {
-        driver.quit();
     }
 }
