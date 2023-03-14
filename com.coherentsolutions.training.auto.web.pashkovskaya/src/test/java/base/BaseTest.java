@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import static java.util.concurrent.TimeUnit.SECONDS;
+
 public class BaseTest {
     private WebDriver driver;
 
@@ -15,6 +17,8 @@ public class BaseTest {
         handlingSSL.setAcceptInsecureCerts(true);
         handlingSSL.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(handlingSSL);
+        driver.manage().timeouts().implicitlyWait(2, SECONDS);
+        driver.manage().window().maximize();
 
         PageDriver.setDriver(driver);
     }

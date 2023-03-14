@@ -20,8 +20,7 @@ public class LogInParameterizedTest extends BaseTest {
     public void logInTest(String username, String password) {
         WebDriver driver = PageDriver.getDriver();
         driver.get(LINK_TO_MAIN_YANDEX_PAGE);
-        driver.manage().timeouts().implicitlyWait(10, SECONDS);
-        driver.manage().window().maximize();
+
         WebElement logInButton = driver.findElement(LOGIN_BUTTON_ON_MAIN_PAGE);
         logInButton.click();
 

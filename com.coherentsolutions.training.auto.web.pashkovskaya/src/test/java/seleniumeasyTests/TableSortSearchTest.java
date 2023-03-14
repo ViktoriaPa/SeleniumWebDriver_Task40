@@ -3,6 +3,7 @@ package seleniumeasyTests;
 import base.BaseTest;
 import base.PageDriver;
 import org.Employee;
+import org.Employees;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -25,7 +26,7 @@ public class TableSortSearchTest extends BaseTest {
         Select dropdownElements = new Select(dropdown);
         dropdownElements.selectByIndex(0);
 
-        Employee employee = new Employee();
+        Employees employee = new Employees();
         List<Employee> employeeList = employee.getEmployeeList(driver, TABLE, NEXT_BUTTON);
 
         employee.printEmployeeFromList();
